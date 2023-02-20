@@ -19,7 +19,7 @@ As tecnologias e ferramentas utilizadas nesta aplicação incluem:
 
 ## 🎯 Desafio ##
 
-Integração com sistemas de pagamento para pagamento de consultas médicas.
+Usar a biblioteca Native Base e TypeScript para criar uma aplicação para consultas médicas.
 
 ## 📁 Acesso ao projeto ##
 
