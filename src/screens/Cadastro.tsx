@@ -1,4 +1,4 @@
-import { VStack, Image, Box, ScrollView, Icon } from "native-base";
+import { VStack, Image, Box, ScrollView, Icon, Checkbox } from "native-base";
 import { useState } from "react";
 import Logo from '../assets/logo.png';
 import { Button } from "../components/Button";
@@ -77,8 +77,42 @@ export default function Cadastro({ navigation }: any) {
     },
     {
       id: 3,
-      title: 'Para finalizar, um detalhe importante:',
-      inputs: []
+      title: 'Para finalizar, quais são seus planos?',
+      inputs: [],
+      checkbox: [
+        {
+          id: 1,
+          value: 'Sulamerica'
+        },
+        {
+          id: 2,
+          value: 'Unimed'
+        },
+        {
+          id: 3,
+          value: 'Bradesco'
+        },
+        {
+          id: 4,
+          value: 'Amil'
+        },
+        {
+          id: 5,
+          value: 'Biosaúde'
+        },
+        {
+          id: 6,
+          value: 'Biovida'
+        },
+        {
+          id: 7,
+          value: 'Outros'
+        },
+        {
+          id: 8,
+          value: 'Não tenho plano'
+        }
+      ]
     }
   ]
 
@@ -108,6 +142,18 @@ export default function Cadastro({ navigation }: any) {
               key={input.id}
               {...input}
             />
+          ))
+        }
+      </Box>
+      <Box>
+        {
+          secoes[secao - 1]?.checkbox?.map(input => (
+            <Checkbox
+              key={input.id}
+              value={input.value}
+            >
+              {input.value}
+            </Checkbox>
           ))
         }
       </Box>
